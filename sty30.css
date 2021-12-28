@@ -1,0 +1,51 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: bolder-box;
+position: relative;
+}
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+body{
+	width: 100vw;
+	height: 100vw;
+	background: #000000;	
+	}
+	.svgBox{
+		width: 300px;
+		height: 200px;
+	}
+	.svgBox svg{
+	fill: none;
+	stroke-width: 0.40;
+	transform: scale(3);
+	stroke: url(#col);
+	stroke-dasharray:60 172 ;
+	stroke-linecap: round;
+	animation: sungat 10s linear infinite;
+	position: absolute;
+	top: -50%;
+	left:0 auto;
+	right:  auto;
+	margin: 0 auto;
+	display: flex;
+	}
+	@keyframes sungat{
+		0%{
+		stroke-dashoffset: 0;
+	}
+		100%{
+		stroke-dashoffset: 232;
+		}
+	}
+	.svgBox svg:nth-of-type(1){
+	animation: none;
+		stroke: #222;
+		stroke-dasharray:none ;
+	}
+	.svgBox svg:nth-of-type(2){
+		filter: blur(6px);
+	}
